@@ -30,6 +30,7 @@
 <center><img src="./images/architecture.png" width="75%%"/></center>
 - Due to React Native's use of components, although you can create a standalone application, you can build upon and combine different projects through the reuse of components. Each component serves as an API that you can include in new or existing projects. Although they sound similar, you are NOT able to make a ReactJS web application from a React Native application. That being said, the basic principles behind the idea of components and the main threads are the same, so it would be relatively simple to "translate" your code and create a web application.
 - React Native tends to lean more towards functional components. The individual components you see on the screen all of have their own functions. You can also pass arguments to the individual components, to customize the result, but these components are all able to be reused in different projects. For example, you can create and render a Text component and choose which values to be displayed. In the following example, the name property is being displayed in the Text component.
+
 ```
 render() {
     return <Text>Hi {this.props.name}!</Text>;
