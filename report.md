@@ -43,7 +43,6 @@ render() {
 - For my first demo, I created a simple application that changes the color of the background, every time the button is pressed. 
 <center><img src="./images/demo_app.png" width="75%%"/></center>
 <center>You can see 2 button presses and the changing of color in this picture</center>
-- In my final demo, I created a Todo application that uses Google Firebase as the database to allow for data persistence. Each individual todo item is a component that contains a check box and delete button to be able to either mark a task as complete or delete the task completely. 
 
-
-	center>
+- In my final demo, I created a Todo application that uses Google Firebase as the database to allow for data persistence. Each individual todo item is a component that contains a check box and delete button to be able to either mark a task as complete or delete the task completely. There is also an input component and an addTodo button that adds the new todo to the database and display.
+<center><img src="./images/todo.png" width="75%%"/></center>
