@@ -21,9 +21,28 @@
 - React Native uses __many__ libraires, which you can find [here](https://github.com/facebook/react-native/tree/master/Libraries)
 
 ## Testing
+- For testing your projects as a developer, the docs recommend using Jest to test. It allows you to test individual components and styles using Snapshots. You can run the snapshot testing setright from the command line, so you don't have to wait for the whole project to build and load onto an emmulator or pull it onto your device to see if your componenets work. It is also quick and allows your to step through your code to debug so you know exactly which part of your component is breaking. They've also added the ability to mock data and components to test your applications even more. Another option for testing is to use Enzyme to test individual componenet. Although it has a nicer API than Jest, it requires more dependencies to be installed. When you run a snapshot test using Jest, the rendured output from the component is saved in a snapshot file. You can then retest the same components and compare the snapshot files to easily see why a snapshot failed if the previous test passed. 
+- For contributors, React Native uses both Circle CI and Appveyor to do continuous integration, but prefers Circle CI since it runs on and tests more platforms than AppVeyor.
+
 ## Software Architecture
+- React Native, like ReactJS, works using the idea of components. There are some basic components included with the framework like View, FlatList, Checkbox, and Text, but you can also create your own components with it's own stylings and properties. Those components then are transformed into the correct native representations for your specific platform iOS or Android. 
+- There are 2 threads that function in every React Native app, the main thread and the Javascript backend. The main thread is what the user interacts with, and is responsible for rendering the different components correctly depending on the device. The Javascript backend is the thread that the developer has control over. This is the code that we write in our projects that contains the functions and styling details for these components. These two threads are connected by a bridge that allows for constant asynchronous communication between the two.
+<center><img src="./images/architecture.png" width="75%%"/></center>
+- Due to React Native's use of components, although you can create a standalone application, you can build upon and combine different projects through the reuse of components. Each component serves as an API that you can include in new or existing projects. Although they sound similar, you are NOT able to make a ReactJS web application from a React Native application. That being said, the basic principles behind the idea of components and the main threads are the same, so it would be relatively simple to "translate" your code and create a web application.
+- React Native tends to lean more towards functional components. The individual components you see on the screen all of have their own functions. You can also pass arguments to the individual components, to customize the result, but these components are all able to be reused in different projects. For example, you can create and render a Text component and choose which values to be displayed. In the following example, the name property is being displayed in the Text component.
+```
+render() {
+    return <Text>Hi {this.props.name}!</Text>;
+  }
+``` 
+
 ## Issues
+
 ## Demo
 - For my first demo, I created a simple application that changes the color of the background, every time the button is pressed. 
 <center><img src="./images/demo_app.png" width="75%%"/></center>
 <center>You can see 2 button presses and the changing of color in this picture</center>
+- In my final demo, I created a Todo application that uses Google Firebase as the database to allow for data persistence. Each individual todo item is a component that contains a check box and delete button to be able to either mark a task as complete or delete the task completely. 
+
+
+	center>
