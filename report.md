@@ -38,6 +38,8 @@ render() {
 ``` 
 
 ## Issues
+- I've found two open tickets on Github that have similar issues. The first one, ticket #22458, is about the user wanting to select specific wext when using the Text component. They set the Text component's 'selectable' attribute to true, but that seems to select the entirety of the text in the Text component rather than allowing them to choose which text they want. This seems to be a bug which could be fixed by adding another selectable feature. Maybe by turning the text input into an array and using the point in the cursor to index it with a start and end point. There is currently a new library that a user can use called "react-native-selectable-text" created by Astrocoders.
+- The second issue is ticket number #22265, where a user is having trouble reloading their Emulator by double tapping the R key. The user has a text input component in their application and when they double tap 'R', the software keyboard pops up and types a letter rather than reloading. The text input component works in such a way that any key press from the hardware counts as a software key press as if the user is typing into that Text input. A way to fix this is to reload their emulator by pressing CTRL + R rather than double r. 
 
 ## Demo
 - For my first demo, I created a simple application that changes the color of the background, every time the button is pressed. 
